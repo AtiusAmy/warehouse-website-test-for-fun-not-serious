@@ -1,0 +1,58 @@
+<header>
+  <nav class="primary">
+    <ul>
+      <li><a href="https://atiusamy.github.io/" class="logomark" target="_self">
+        {% include svg/atius.svg %}
+      </a></li>
+
+      <li><a href="https://www.youtube.com/@Atius/videos" target="_self">Minecraft Videos</a></li>
+    </ul>
+
+    <ul>
+      <li><a href="{{ site.baseurl }}/feed.xml" title="RSS Feed">
+        {% include svg/rss-square.svg %}
+      </a></li>
+
+      <li><a href="https://mastodon.world/@Atius" target="_blank" rel="noopener" title="Mastodon">
+        {% include svg/mastodon.svg %}
+      </a></li>
+      
+      <li><a href="https://legacy.curseforge.com/members/atiusamy/projects" target="_blank" rel="noopener" title="Curseforge">
+        {% include svg/appcenter.svg %}
+      </a></li>
+            
+      <li><a href="https://modrinth.com/user/AtiusAmy" target="_blank" rel="noopener" title="Modrinth">
+        {% include svg/modrinth.svg %}
+      </a></li>
+    </ul>
+  </nav>
+  <nav class="secondary">
+    <div>
+
+    <div id="search-container" class="hidden">
+      {% include svg/edit-find-symbolic.svg %}
+      <input type="text" id="search-input" placeholder="Search Posts…">
+      <ul id="results-container"></ul>
+    </div>
+
+    <script src="/scripts/search.js"></script>
+
+    <script>
+      document.getElementById('search-container').classList.remove("hidden")
+
+      SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        searchResultTemplate: `<li>
+          <a href="{url}">
+            <div class="featured-image" alt="Featured image" style="background-image: url({image});"></div>
+            <span id="title">{title}</span>
+            <span id="description">{description}</span>
+          </a>
+        </li>`,
+        resultsContainer: document.getElementById('results-container'),
+        noResultsText: ("No Result Found"),
+        json: '/search.json'
+      })
+    </script>
+  </nav>
+</header>
