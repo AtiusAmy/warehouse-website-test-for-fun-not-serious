@@ -1,0 +1,19 @@
+# ----------------------- #
+#    Jekyll & Plugins     #
+# ----------------------- #
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+plugins:
+        - jekyll-seo-tag
+social:
+  - title: download
+    url: https://flathub.org/apps/io.github.flattool.Warehouse
+  - title: github
+    url: https://github.com/flattool/warehouse
+  - title: discord
+    url: https://github.com/flattool/warehouse/pull/25
+  - title: matrix
+    url: https://matrix.to/#/!SxRiApuHYRpJNgqxso:matrix.org
